@@ -299,7 +299,24 @@
       
         
           
-            <p>[TOC]</p>
+            <h1><span id="mu-lu">目录</span><a href="#mu-lu" class="header-anchor">#</a></h1><div class="toc">
+
+<!-- toc -->
+
+<ul>
+<li><a href="#localhost">Localhost</a></li>
+<li><a href="#login">Login</a></li>
+<li><a href="#admin">Admin</a></li>
+<li><a href="#port51">Port51</a></li>
+<li><a href="#shen-dun-ju-de-mi-mi">神盾局的秘密</a></li>
+<li><a href="#api-diao-yong">api调用</a></li>
+</ul>
+<!-- tocstop -->
+
+</div>
+
+
+
 <h2><span id="localhost">Localhost</span><a href="#localhost" class="header-anchor">#</a></h2><p><img src="/2020/07/26/Jarvios-OJ-Web-WriteUp-%E4%B8%80/localhost1.png" alt></p>
 <p>题目提示要用localhost去访问，以下给出两个方法</p>
 <h4><span id="jie-fa-yi-li-yong-burpsuite-xiu-gai-qing-qiu-bao-wen">解法一·：利用burpsuite修改请求报文</span><a href="#jie-fa-yi-li-yong-burpsuite-xiu-gai-qing-qiu-bao-wen" class="header-anchor">#</a></h4><p>利用burpsuite监听浏览器，在请求报文中添加：</p>
@@ -308,9 +325,11 @@
 <p>即可以127.0.0.1的IP地址访问网页，获得Flag</p>
 <p><img src="/2020/07/26/Jarvios-OJ-Web-WriteUp-%E4%B8%80/localhost2.png" alt></p>
 <blockquote>
-<h6><span id="xue-xi-https-portswigger-net-support-configuring-firefox-to-work-with-burp">学习：</span><a href="#xue-xi-https-portswigger-net-support-configuring-firefox-to-work-with-burp" class="header-anchor">#</a></h6></blockquote>
+<p>学习：<a href="https://portswigger.net/support/configuring-firefox-to-work-with-burp" target="_blank" rel="noopener">https://portswigger.net/support/configuring-firefox-to-work-with-burp</a></p>
+</blockquote>
 <h4><span id="jie-fa-er-li-yong-firefox-liu-lan-qi-x-forwarded-for-header-cha-jian-wei-zao-ip-di-zhi">解法二：利用Firefox浏览器X-Forwarded-For-Header插件伪造IP地址</span><a href="#jie-fa-er-li-yong-firefox-liu-lan-qi-x-forwarded-for-header-cha-jian-wei-zao-ip-di-zhi" class="header-anchor">#</a></h4><blockquote>
-<h6><span id="xue-xi-https-blog-csdn-net-fllowone-article-details-85038207">学习：</span><a href="#xue-xi-https-blog-csdn-net-fllowone-article-details-85038207" class="header-anchor">#</a></h6></blockquote>
+<p>学习：<a href="https://blog.csdn.net/Fllowone/article/details/85038207" target="_blank" rel="noopener">https://blog.csdn.net/Fllowone/article/details/85038207</a></p>
+</blockquote>
 <h2><span id="login">Login</span><a href="#login" class="header-anchor">#</a></h2><h4><span id="jie-fa-sql-zhu-ru">解法：SQL注入</span><a href="#jie-fa-sql-zhu-ru" class="header-anchor">#</a></h4><p>先抓包，在response报文中获得hint，有关SQL注入。其中唯一可以注入的地方就是md5函数。</p>
 <p><img src="/2020/07/26/Jarvios-OJ-Web-WriteUp-%E4%B8%80/login1.png" alt></p>
 <p>其中唯一可以注入的地方就是md5函数。既要让“passward=”后面的部分为true。</p>
@@ -321,7 +340,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入内容：ffifdyop</span><br><span class="line">报文内容：%27or%276%5Cxc9%5D%5Cx99%5Cxe9%21r%2C%5Cxf9%5Cxedb%5Cx1c</span><br><span class="line">字符串：string: &#39;or&#39;6]!r,b</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<h6><span id="xue-xi-https-www-w3school-com-cn-php-func-string-md5-asp">学习：</span><a href="#xue-xi-https-www-w3school-com-cn-php-func-string-md5-asp" class="header-anchor">#</a></h6></blockquote>
+<p>学习：<a href="https://www.w3school.com.cn/php/func_string_md5.asp" target="_blank" rel="noopener">https://www.w3school.com.cn/php/func_string_md5.asp</a></p>
+</blockquote>
 <h2><span id="admin">Admin</span><a href="#admin" class="header-anchor">#</a></h2><h4><span id="jie-fa-robots-txt-cookie-qi-pian">解法：robots.txt+cookie欺骗</span><a href="#jie-fa-robots-txt-cookie-qi-pian" class="header-anchor">#</a></h4><p>打开界面就是Hello World，没有任何输入窗口。抓包后发现有：</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">admin = <span class="number">0</span></span><br></pre></td></tr></table></figure>
 
@@ -336,7 +356,9 @@
 </blockquote>
 <p><img src="/2020/07/26/Jarvios-OJ-Web-WriteUp-%E4%B8%80/admin1.png" alt></p>
 <blockquote>
-<h6><span id="xue-xi-https-blog-csdn-net-wyj-1216-article-details-82949222">学习：</span><a href="#xue-xi-https-blog-csdn-net-wyj-1216-article-details-82949222" class="header-anchor">#</a></h6><h6><span id="https-blog-51cto-com-3757646-1401594"></span><a href="#https-blog-51cto-com-3757646-1401594" class="header-anchor">#</a></h6></blockquote>
+<p>学习：<a href="https://blog.csdn.net/wyj_1216/article/details/82949222" target="_blank" rel="noopener">https://blog.csdn.net/wyj_1216/article/details/82949222</a></p>
+<p>​           <a href="https://blog.51cto.com/3757646/1401594" target="_blank" rel="noopener">https://blog.51cto.com/3757646/1401594</a></p>
+</blockquote>
 <h2><span id="port51">Port51</span><a href="#port51" class="header-anchor">#</a></h2><h4><span id="jie-fa-curl-te-ding-duan-kou">解法：curl特定端口</span><a href="#jie-fa-curl-te-ding-duan-kou" class="header-anchor">#</a></h4><p>进入页面就看到提示：要用51端口来访问网页获取flag；使用curl指令来发送请求报文，并指定port</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl --local-port 0051 http:&#x2F;&#x2F;web.jarvisoj.com:32770&#x2F;</span><br></pre></td></tr></table></figure>
 
@@ -346,7 +368,11 @@
 <p>原因：用本机去访问的时候，默认用的端口不是51；用虚拟机去访问的时候，流量也要经过主机的，端口也不是51；如果用服务器vps的话就没这个问题。</p>
 </blockquote>
 <blockquote>
-<h6><span id="xue-xi-https-blog-csdn-net-qq-31481187-article-details-60968595">学习：</span><a href="#xue-xi-https-blog-csdn-net-qq-31481187-article-details-60968595" class="header-anchor">#</a></h6></blockquote>
+<p>学习：<a href="https://blog.csdn.net/qq_31481187/article/details/60968595" target="_blank" rel="noopener">https://blog.csdn.net/qq_31481187/article/details/60968595</a></p>
+</blockquote>
+<blockquote>
+<p>​           <a href="https://blog.csdn.net/weixin_44077544/article/details/89407287" target="_blank" rel="noopener">https://blog.csdn.net/weixin_44077544/article/details/89407287</a></p>
+</blockquote>
 <blockquote>
 <h6><span id="https-blog-csdn-net-weixin-44077544-article-details-89407287"></span><a href="#https-blog-csdn-net-weixin-44077544-article-details-89407287" class="header-anchor">#</a></h6></blockquote>
 <h2><span id="shen-dun-ju-de-mi-mi">神盾局的秘密</span><a href="#shen-dun-ju-de-mi-mi" class="header-anchor">#</a></h2><h4><span id="jie-fa-fan-xu-lie-hua-base64-jia-jie-mi">解法：反序列化+base64加解密</span><a href="#jie-fa-fan-xu-lie-hua-base64-jia-jie-mi" class="header-anchor">#</a></h4><p>打开后是一张图片，进行抓包尝试，在response中发现源码，img后的内容经过了base64加密</p>
