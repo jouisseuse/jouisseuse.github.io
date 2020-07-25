@@ -79,12 +79,12 @@
 
 
 
-<meta name="description" content="目录#     Localhost Login Admin Port51 神盾局的秘密 api调用        Localhost# 题目提示要用localhost去访问，以下给出两个方法 解法一·：利用burpsuite修改请求报文#利用burpsuite监听浏览器，在请求报文中添加： 1X-FORWARDED-FOR:127.0.0.1  即可以127.0.0.1的IP地址访问网页，获得Fl">
+<meta name="description" content="Jarvios OJ Web WriteUp(一)#     Localhost Login Admin Port51 神盾局的秘密 api调用        Localhost# 题目提示要用localhost去访问，以下给出两个方法 解法一·：利用burpsuite修改请求报文#利用burpsuite监听浏览器，在请求报文中添加： 1X-FORWARDED-FOR:127.0.0.1  即可以">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Jarvios OJ Web WriteUp(一)">
 <meta property="og:url" content="http://yoursite.com/2020/07/26/Jarvios-OJ-Web-WriteUp-%E4%B8%80/index.html">
 <meta property="og:site_name" content="Cici&#39;s Blog">
-<meta property="og:description" content="目录#     Localhost Login Admin Port51 神盾局的秘密 api调用        Localhost# 题目提示要用localhost去访问，以下给出两个方法 解法一·：利用burpsuite修改请求报文#利用burpsuite监听浏览器，在请求报文中添加： 1X-FORWARDED-FOR:127.0.0.1  即可以127.0.0.1的IP地址访问网页，获得Fl">
+<meta property="og:description" content="Jarvios OJ Web WriteUp(一)#     Localhost Login Admin Port51 神盾局的秘密 api调用        Localhost# 题目提示要用localhost去访问，以下给出两个方法 解法一·：利用burpsuite修改请求报文#利用burpsuite监听浏览器，在请求报文中添加： 1X-FORWARDED-FOR:127.0.0.1  即可以">
 <meta property="og:image" content="http://yoursite.com/2020/07/26/Jarvios-OJ-Web-WriteUp-%E4%B8%80/localhost1.png">
 <meta property="og:image" content="http://yoursite.com/2020/07/26/Jarvios-OJ-Web-WriteUp-%E4%B8%80/localhost2.png">
 <meta property="og:image" content="http://yoursite.com/2020/07/26/Jarvios-OJ-Web-WriteUp-%E4%B8%80/login1.png">
@@ -94,7 +94,7 @@
 <meta property="og:image" content="http://yoursite.com/2020/07/26/Jarvios-OJ-Web-WriteUp-%E4%B8%80/api1.png">
 <meta property="og:image" content="http://yoursite.com/2020/07/26/Jarvios-OJ-Web-WriteUp-%E4%B8%80/api2.png">
 <meta property="article:published_time" content="2020-07-25T18:10:04.000Z">
-<meta property="article:modified_time" content="2020-07-25T18:20:04.861Z">
+<meta property="article:modified_time" content="2020-07-25T18:23:23.063Z">
 <meta property="article:author" content="Cici Gao">
 <meta property="article:tag" content="CTF practice">
 <meta name="twitter:card" content="summary">
@@ -308,7 +308,7 @@
       
 
       
-        <h1><span id="mu-lu">目录</span><a href="#mu-lu" class="header-anchor">#</a></h1><div class="toc">
+        <h1><span id="jarvios-oj-web-writeup-yi">Jarvios OJ Web WriteUp(一)</span><a href="#jarvios-oj-web-writeup-yi" class="header-anchor">#</a></h1><div class="toc">
 
 <!-- toc -->
 
@@ -577,7 +577,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text">目录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.1.</span> <span class="nav-text">Localhost</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">解法一·：利用burpsuite修改请求报文</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">解法二：利用Firefox浏览器X-Forwarded-For-Header插件伪造IP地址</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.2.</span> <span class="nav-text">Login</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">解法：SQL注入</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.3.</span> <span class="nav-text">Admin</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#"><span class="nav-number">1.3.0.1.</span> <span class="nav-text">解法：robots.txt+cookie欺骗</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.4.</span> <span class="nav-text">Port51</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#"><span class="nav-number">1.4.0.1.</span> <span class="nav-text">解法：curl特定端口</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#"><span class="nav-number">1.4.0.1.0.1.</span> <span class="nav-text">#</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.5.</span> <span class="nav-text">神盾局的秘密</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#"><span class="nav-number">1.5.0.1.</span> <span class="nav-text">解法：反序列化+base64加解密</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.6.</span> <span class="nav-text">api调用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#"><span class="nav-number">1.6.0.1.</span> <span class="nav-text">解法：XXE攻击</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text">Jarvios OJ Web WriteUp(一)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.1.</span> <span class="nav-text">Localhost</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">解法一·：利用burpsuite修改请求报文</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">解法二：利用Firefox浏览器X-Forwarded-For-Header插件伪造IP地址</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.2.</span> <span class="nav-text">Login</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">解法：SQL注入</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.3.</span> <span class="nav-text">Admin</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#"><span class="nav-number">1.3.0.1.</span> <span class="nav-text">解法：robots.txt+cookie欺骗</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.4.</span> <span class="nav-text">Port51</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#"><span class="nav-number">1.4.0.1.</span> <span class="nav-text">解法：curl特定端口</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#"><span class="nav-number">1.4.0.1.0.1.</span> <span class="nav-text">#</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.5.</span> <span class="nav-text">神盾局的秘密</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#"><span class="nav-number">1.5.0.1.</span> <span class="nav-text">解法：反序列化+base64加解密</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.6.</span> <span class="nav-text">api调用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#"><span class="nav-number">1.6.0.1.</span> <span class="nav-text">解法：XXE攻击</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
