@@ -299,19 +299,19 @@
       
         
           
-            <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p>[TOC]</p>
-<h2 id="Localhost"><a href="#Localhost" class="headerlink" title="Localhost"></a>Localhost</h2><p><img src="/2020/07/20/Jarvios-OJ-Web-WriteUp-%E4%B8%80/localhost1.png" alt></p>
+            <h1><span id="mu-lu">目录</span><a href="#mu-lu" class="header-anchor">#</a></h1><p>[TOC]</p>
+<h2><span id="localhost">Localhost</span><a href="#localhost" class="header-anchor">#</a></h2><p><img src="/2020/07/20/Jarvios-OJ-Web-WriteUp-%E4%B8%80/localhost1.png" alt></p>
 <p>题目提示要用localhost去访问，以下给出两个方法</p>
-<h4 id="解法一·：利用burpsuite修改请求报文"><a href="#解法一·：利用burpsuite修改请求报文" class="headerlink" title="解法一·：利用burpsuite修改请求报文"></a>解法一·：利用burpsuite修改请求报文</h4><p>利用burpsuite监听浏览器，在请求报文中添加：</p>
+<h4><span id="jie-fa-yi-li-yong-burpsuite-xiu-gai-qing-qiu-bao-wen">解法一·：利用burpsuite修改请求报文</span><a href="#jie-fa-yi-li-yong-burpsuite-xiu-gai-qing-qiu-bao-wen" class="header-anchor">#</a></h4><p>利用burpsuite监听浏览器，在请求报文中添加：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">X-FORWARDED-FOR:127.0.0.1</span><br></pre></td></tr></table></figure>
 
 <p>即可以127.0.0.1的IP地址访问网页，获得Flag</p>
 <p><img src="/2020/07/20/Jarvios-OJ-Web-WriteUp-%E4%B8%80/localhost2.png" alt></p>
 <blockquote>
-<h6 id="学习：https-portswigger-net-support-configuring-firefox-to-work-with-burp"><a href="#学习：https-portswigger-net-support-configuring-firefox-to-work-with-burp" class="headerlink" title="学习：https://portswigger.net/support/configuring-firefox-to-work-with-burp"></a>学习：<a href="https://portswigger.net/support/configuring-firefox-to-work-with-burp" target="_blank" rel="noopener">https://portswigger.net/support/configuring-firefox-to-work-with-burp</a></h6></blockquote>
-<h4 id="解法二：利用Firefox浏览器X-Forwarded-For-Header插件伪造IP地址"><a href="#解法二：利用Firefox浏览器X-Forwarded-For-Header插件伪造IP地址" class="headerlink" title="解法二：利用Firefox浏览器X-Forwarded-For-Header插件伪造IP地址"></a>解法二：利用Firefox浏览器X-Forwarded-For-Header插件伪造IP地址</h4><blockquote>
-<h6 id="学习：https-blog-csdn-net-Fllowone-article-details-85038207"><a href="#学习：https-blog-csdn-net-Fllowone-article-details-85038207" class="headerlink" title="学习：https://blog.csdn.net/Fllowone/article/details/85038207"></a>学习：<a href="https://blog.csdn.net/Fllowone/article/details/85038207" target="_blank" rel="noopener">https://blog.csdn.net/Fllowone/article/details/85038207</a></h6></blockquote>
-<h2 id="Login"><a href="#Login" class="headerlink" title="Login"></a>Login</h2><h4 id="解法：SQL注入"><a href="#解法：SQL注入" class="headerlink" title="解法：SQL注入"></a>解法：SQL注入</h4><p>先抓包，在response报文中获得hint，有关SQL注入。其中唯一可以注入的地方就是md5函数。</p>
+<h6><span id="xue-xi-https-portswigger-net-support-configuring-firefox-to-work-with-burp">学习：</span><a href="#xue-xi-https-portswigger-net-support-configuring-firefox-to-work-with-burp" class="header-anchor">#</a></h6></blockquote>
+<h4><span id="jie-fa-er-li-yong-firefox-liu-lan-qi-x-forwarded-for-header-cha-jian-wei-zao-ip-di-zhi">解法二：利用Firefox浏览器X-Forwarded-For-Header插件伪造IP地址</span><a href="#jie-fa-er-li-yong-firefox-liu-lan-qi-x-forwarded-for-header-cha-jian-wei-zao-ip-di-zhi" class="header-anchor">#</a></h4><blockquote>
+<h6><span id="xue-xi-https-blog-csdn-net-fllowone-article-details-85038207">学习：</span><a href="#xue-xi-https-blog-csdn-net-fllowone-article-details-85038207" class="header-anchor">#</a></h6></blockquote>
+<h2><span id="login">Login</span><a href="#login" class="header-anchor">#</a></h2><h4><span id="jie-fa-sql-zhu-ru">解法：SQL注入</span><a href="#jie-fa-sql-zhu-ru" class="header-anchor">#</a></h4><p>先抓包，在response报文中获得hint，有关SQL注入。其中唯一可以注入的地方就是md5函数。</p>
 <p><img src="/2020/07/20/Jarvios-OJ-Web-WriteUp-%E4%B8%80/login1.png" alt></p>
 <p>其中唯一可以注入的地方就是md5函数。既要让“passward=”后面的部分为true。</p>
 <p>可以利用字符串“ffifdyop”经过md5加密后可得or‘6xxxxx’形式。字符串在SQL查询中，做布尔运算时，都被认为成一个整型数。只要开头是数字开头都被认为成true。</p>
@@ -321,8 +321,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入内容：ffifdyop</span><br><span class="line">报文内容：%27or%276%5Cxc9%5D%5Cx99%5Cxe9%21r%2C%5Cxf9%5Cxedb%5Cx1c</span><br><span class="line">字符串：string: &#39;or&#39;6]!r,b</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<h6 id="学习：https-www-w3school-com-cn-php-func-string-md5-asp"><a href="#学习：https-www-w3school-com-cn-php-func-string-md5-asp" class="headerlink" title="学习：https://www.w3school.com.cn/php/func_string_md5.asp"></a>学习：<a href="https://www.w3school.com.cn/php/func_string_md5.asp" target="_blank" rel="noopener">https://www.w3school.com.cn/php/func_string_md5.asp</a></h6></blockquote>
-<h2 id="Admin"><a href="#Admin" class="headerlink" title="Admin"></a>Admin</h2><h4 id="解法：robots-txt-cookie欺骗"><a href="#解法：robots-txt-cookie欺骗" class="headerlink" title="解法：robots.txt+cookie欺骗"></a>解法：robots.txt+cookie欺骗</h4><p>打开界面就是Hello World，没有任何输入窗口。抓包后发现有：</p>
+<h6><span id="xue-xi-https-www-w3school-com-cn-php-func-string-md5-asp">学习：</span><a href="#xue-xi-https-www-w3school-com-cn-php-func-string-md5-asp" class="header-anchor">#</a></h6></blockquote>
+<h2><span id="admin">Admin</span><a href="#admin" class="header-anchor">#</a></h2><h4><span id="jie-fa-robots-txt-cookie-qi-pian">解法：robots.txt+cookie欺骗</span><a href="#jie-fa-robots-txt-cookie-qi-pian" class="header-anchor">#</a></h4><p>打开界面就是Hello World，没有任何输入窗口。抓包后发现有：</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">admin = <span class="number">0</span></span><br></pre></td></tr></table></figure>
 
 <p>改为1后并没有什么收获，一脸懵逼；</p>
@@ -336,8 +336,8 @@
 </blockquote>
 <p><img src="/2020/07/20/Jarvios-OJ-Web-WriteUp-%E4%B8%80/admin1.png" alt></p>
 <blockquote>
-<h6 id="学习：https-blog-csdn-net-wyj-1216-article-details-82949222"><a href="#学习：https-blog-csdn-net-wyj-1216-article-details-82949222" class="headerlink" title="学习：https://blog.csdn.net/wyj_1216/article/details/82949222"></a>学习：<a href="https://blog.csdn.net/wyj_1216/article/details/82949222" target="_blank" rel="noopener">https://blog.csdn.net/wyj_1216/article/details/82949222</a></h6><h6 id="https-blog-51cto-com-3757646-1401594"><a href="#https-blog-51cto-com-3757646-1401594" class="headerlink" title="https://blog.51cto.com/3757646/1401594"></a><a href="https://blog.51cto.com/3757646/1401594" target="_blank" rel="noopener">https://blog.51cto.com/3757646/1401594</a></h6></blockquote>
-<h2 id="Port51"><a href="#Port51" class="headerlink" title="Port51"></a>Port51</h2><h4 id="解法：curl特定端口"><a href="#解法：curl特定端口" class="headerlink" title="解法：curl特定端口"></a>解法：curl特定端口</h4><p>进入页面就看到提示：要用51端口来访问网页获取flag；使用curl指令来发送请求报文，并指定port</p>
+<h6><span id="xue-xi-https-blog-csdn-net-wyj-1216-article-details-82949222">学习：</span><a href="#xue-xi-https-blog-csdn-net-wyj-1216-article-details-82949222" class="header-anchor">#</a></h6><h6><span id="https-blog-51cto-com-3757646-1401594"></span><a href="#https-blog-51cto-com-3757646-1401594" class="header-anchor">#</a></h6></blockquote>
+<h2><span id="port51">Port51</span><a href="#port51" class="header-anchor">#</a></h2><h4><span id="jie-fa-curl-te-ding-duan-kou">解法：curl特定端口</span><a href="#jie-fa-curl-te-ding-duan-kou" class="header-anchor">#</a></h4><p>进入页面就看到提示：要用51端口来访问网页获取flag；使用curl指令来发送请求报文，并指定port</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl --local-port 0051 http:&#x2F;&#x2F;web.jarvisoj.com:32770&#x2F;</span><br></pre></td></tr></table></figure>
 
 <p>但在本机和虚拟机的终端操作都没有成功，尝试修改本机的端口地址也没能获得flag，最后在阿里云服务器上成功获得了flag</p>
@@ -346,10 +346,10 @@
 <p>原因：用本机去访问的时候，默认用的端口不是51；用虚拟机去访问的时候，流量也要经过主机的，端口也不是51；如果用服务器vps的话就没这个问题。</p>
 </blockquote>
 <blockquote>
-<h6 id="学习：https-blog-csdn-net-qq-31481187-article-details-60968595"><a href="#学习：https-blog-csdn-net-qq-31481187-article-details-60968595" class="headerlink" title="学习：https://blog.csdn.net/qq_31481187/article/details/60968595"></a>学习：<a href="https://blog.csdn.net/qq_31481187/article/details/60968595" target="_blank" rel="noopener">https://blog.csdn.net/qq_31481187/article/details/60968595</a></h6></blockquote>
+<h6><span id="xue-xi-https-blog-csdn-net-qq-31481187-article-details-60968595">学习：</span><a href="#xue-xi-https-blog-csdn-net-qq-31481187-article-details-60968595" class="header-anchor">#</a></h6></blockquote>
 <blockquote>
-<h6 id="https-blog-csdn-net-weixin-44077544-article-details-89407287"><a href="#https-blog-csdn-net-weixin-44077544-article-details-89407287" class="headerlink" title="https://blog.csdn.net/weixin_44077544/article/details/89407287"></a><a href="https://blog.csdn.net/weixin_44077544/article/details/89407287" target="_blank" rel="noopener">https://blog.csdn.net/weixin_44077544/article/details/89407287</a></h6></blockquote>
-<h2 id="神盾局的秘密"><a href="#神盾局的秘密" class="headerlink" title="神盾局的秘密"></a>神盾局的秘密</h2><h4 id="解法：反序列化-base64加解密"><a href="#解法：反序列化-base64加解密" class="headerlink" title="解法：反序列化+base64加解密"></a>解法：反序列化+base64加解密</h4><p>打开后是一张图片，进行抓包尝试，在response中发现源码，img后的内容经过了base64加密</p>
+<h6><span id="https-blog-csdn-net-weixin-44077544-article-details-89407287"></span><a href="#https-blog-csdn-net-weixin-44077544-article-details-89407287" class="header-anchor">#</a></h6></blockquote>
+<h2><span id="shen-dun-ju-de-mi-mi">神盾局的秘密</span><a href="#shen-dun-ju-de-mi-mi" class="header-anchor">#</a></h2><h4><span id="jie-fa-fan-xu-lie-hua-base64-jia-jie-mi">解法：反序列化+base64加解密</span><a href="#jie-fa-fan-xu-lie-hua-base64-jia-jie-mi" class="header-anchor">#</a></h4><p>打开后是一张图片，进行抓包尝试，在response中发现源码，img后的内容经过了base64加密</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">解密前：&#x2F;showimg.php?img&#x3D;c2hpZWxkLmpwZw&#x3D;&#x3D; </span><br><span class="line">解密后：shield.jpg</span><br></pre></td></tr></table></figure>
 
 <blockquote>
@@ -371,7 +371,7 @@
 <blockquote>
 <p>学习：<a href="https://blog.csdn.net/weixin_44077544/article/details/89407129" target="_blank" rel="noopener">https://blog.csdn.net/weixin_44077544/article/details/89407129</a></p>
 </blockquote>
-<h2 id="api调用"><a href="#api调用" class="headerlink" title="api调用"></a>api调用</h2><h4 id="解法：XXE攻击"><a href="#解法：XXE攻击" class="headerlink" title="解法：XXE攻击"></a>解法：XXE攻击</h4><p>根据提示flag在/home/ctf/flag.txt文件中，需要调用文件来获取flag</p>
+<h2><span id="api-diao-yong">api调用</span><a href="#api-diao-yong" class="header-anchor">#</a></h2><h4><span id="jie-fa-xxe-gong-ji">解法：XXE攻击</span><a href="#jie-fa-xxe-gong-ji" class="header-anchor">#</a></h4><p>根据提示flag在/home/ctf/flag.txt文件中，需要调用文件来获取flag</p>
 <p>先随意输入内容进行抓包，发现发送报文是以json文件的形式发送的</p>
 <p><img src="/2020/07/20/Jarvios-OJ-Web-WriteUp-%E4%B8%80/api1.png" alt></p>
 <p>根据hint，flag在文件中，考虑用xxe攻击调用内部文件。<br>先将报文类型改为xml，再将报文内容进行如下修改，发送即获得flag</p>
@@ -501,16 +501,16 @@
         
           
             <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<h2><span id="quick-start">Quick Start</span><a href="#quick-start" class="header-anchor">#</a></h2><h3><span id="create-a-new-post">Create a new post</span><a href="#create-a-new-post" class="header-anchor">#</a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3><span id="run-server">Run server</span><a href="#run-server" class="header-anchor">#</a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3><span id="generate-static-files">Generate static files</span><a href="#generate-static-files" class="header-anchor">#</a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3><span id="deploy-to-remote-sites">Deploy to remote sites</span><a href="#deploy-to-remote-sites" class="header-anchor">#</a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
