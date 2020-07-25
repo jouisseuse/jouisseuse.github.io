@@ -79,17 +79,19 @@
 
 
 
-<meta name="description" content="目录[TOC] Localhost![](截屏2020-07-21 21.35.02.png) 题目提示要用localhost去访问，以下给出两个方法 解法一·：利用burpsuite修改请求报文利用burpsuite监听浏览器，在请求报文中添加： 1X-FORWARDED-FOR:127.0.0.1  即可以127.0.0.1的IP地址访问网页，获得Flag ![](Jarvios-OJ-Web">
+<meta name="description" content="目录[TOC] Localhost 题目提示要用localhost去访问，以下给出两个方法 解法一·：利用burpsuite修改请求报文利用burpsuite监听浏览器，在请求报文中添加： 1X-FORWARDED-FOR:127.0.0.1  即可以127.0.0.1的IP地址访问网页，获得Flag ![](Jarvios-OJ-Web-WriteUp-一&#x2F;截屏2020-07-21 21.33.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Jarvios OJ Web WriteUp(一)">
 <meta property="og:url" content="http://yoursite.com/2020/07/20/Jarvios-OJ-Web-WriteUp-%E4%B8%80/index.html">
 <meta property="og:site_name" content="Cici&#39;s Blog">
-<meta property="og:description" content="目录[TOC] Localhost![](截屏2020-07-21 21.35.02.png) 题目提示要用localhost去访问，以下给出两个方法 解法一·：利用burpsuite修改请求报文利用burpsuite监听浏览器，在请求报文中添加： 1X-FORWARDED-FOR:127.0.0.1  即可以127.0.0.1的IP地址访问网页，获得Flag ![](Jarvios-OJ-Web">
+<meta property="og:description" content="目录[TOC] Localhost 题目提示要用localhost去访问，以下给出两个方法 解法一·：利用burpsuite修改请求报文利用burpsuite监听浏览器，在请求报文中添加： 1X-FORWARDED-FOR:127.0.0.1  即可以127.0.0.1的IP地址访问网页，获得Flag ![](Jarvios-OJ-Web-WriteUp-一&#x2F;截屏2020-07-21 21.33.">
+<meta property="og:image" content="http://yoursite.com/2020/07/20/Jarvios-OJ-Web-WriteUp-%E4%B8%80/1.png">
 <meta property="article:published_time" content="2020-07-20T15:10:04.000Z">
-<meta property="article:modified_time" content="2020-07-25T17:42:34.512Z">
+<meta property="article:modified_time" content="2020-07-25T17:45:36.687Z">
 <meta property="article:author" content="Cici Gao">
 <meta property="article:tag" content="CTF practice">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/07/20/Jarvios-OJ-Web-WriteUp-%E4%B8%80/1.png">
 
 
 
@@ -300,7 +302,7 @@
 
       
         <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p>[TOC]</p>
-<h2 id="Localhost"><a href="#Localhost" class="headerlink" title="Localhost"></a>Localhost</h2><p>![](截屏2020-07-21 21.35.02.png)</p>
+<h2 id="Localhost"><a href="#Localhost" class="headerlink" title="Localhost"></a>Localhost</h2><p><img src="/2020/07/20/Jarvios-OJ-Web-WriteUp-%E4%B8%80/1.png" alt></p>
 <p>题目提示要用localhost去访问，以下给出两个方法</p>
 <h4 id="解法一·：利用burpsuite修改请求报文"><a href="#解法一·：利用burpsuite修改请求报文" class="headerlink" title="解法一·：利用burpsuite修改请求报文"></a>解法一·：利用burpsuite修改请求报文</h4><p>利用burpsuite监听浏览器，在请求报文中添加：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">X-FORWARDED-FOR:127.0.0.1</span><br></pre></td></tr></table></figure>
