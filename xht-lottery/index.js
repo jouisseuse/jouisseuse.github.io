@@ -1,3 +1,37 @@
+
+// 获取页面元素
+var numberElement = document.getElementById('number');
+var btnElement = document.getElementById('btn');
+
+// 定义全局变量
+var intervalId;  // 用于保存定时器ID
+var number = 0;  // 当前数字
+var isRolling = false;  // 标记数字是否在滚动中
+
+// 定义滚动数字的函数
+function rollNumber() {
+    numberElement.textContent = number;
+    number++;
+}
+
+// 按钮点击事件处理函数
+function btnClick() {
+    if (isRolling) {
+        // 如果数字在滚动中，点击按钮暂停滚动
+        clearInterval(intervalId);
+        isRolling = false;
+        btnElement.textContent = '开始抽奖';
+    } else {
+        // 如果数字没有在滚动中，点击按钮开始滚动
+        intervalId = setInterval(rollNumber, 100); // 每100毫秒滚动一次数字
+        isRolling = true;
+        btnElement.textContent = '暂停抽奖';
+    }
+}
+
+// 绑定按钮点击事件
+btnElement.addEventListener('click', btnClick);
+
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -47,7 +81,7 @@ var area = Object.keys(obj)[getAreaRandomIndex];
 var rows = getRowsRandomIndex + 1;
 // 得到第几列
 var cols = obj[Object.keys(obj)[getAreaRandomIndex]][getRowsRandomIndex][getcolsRandomIndex];
-document.getElementById('result').innerHTML = '第' + area + '区, 第' + rows + '排, 第' + cols + '号';
+//document.getElementById('result').innerHTML = '第' + area + '区, 第' + rows + '排, 第' + cols + '号';
 /*
 function deepCopy(x){
     return JSON.parse(JSON.stringify(x));

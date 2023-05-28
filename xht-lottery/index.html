@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="zh">
-
-  <head>
-    <meta charset="UTF-8" />
-    <!--meta name="viewport" content="width=device-width, initial-scale=1.0"-->
-    <!--link rel="stylesheet" type="text/css" href="index.css" /-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<head>
     <title>复旦大学学生舞蹈团20周年专场抽奖</title>
-  </head>
-
+    <style>
+        #number {
+            font-size: 48px;
+            font-weight: bold;
+            margin-top: 100px;
+        }
+        #btn {
+            font-size: 24px;
+            padding: 10px 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
   <body>
-    <p id="result"></p>
-    <!-->
-    <div id="container">
-    </div>
-    <div id="readable">
-        <span id="sec" class="digits">-</span>区第
-        <span id="row" class="digits">-</span>排第
-        <span id="col" class="digits">-</span>个
-    </div>
-    <-->
-    <div id="copyright">
-        复旦大学学生舞蹈团 2023
-    </div>
-    <script type="text/javascript" src="index.js"></script>
-  </body>
+    <div id="number">0</div>
+    <button id="btn">开始抽奖</button>
 
+    <script src="index.js"></script>
+    <div id="copyright">
+      复旦大学学生舞蹈团 2023
+    </div>
+  </body>
 </html>
