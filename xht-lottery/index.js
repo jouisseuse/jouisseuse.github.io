@@ -1,37 +1,3 @@
-
-// 获取页面元素
-var numberElement = document.getElementById('number');
-var btnElement = document.getElementById('btn');
-
-// 定义全局变量
-var intervalId;  // 用于保存定时器ID
-var number = 0;  // 当前数字
-var isRolling = false;  // 标记数字是否在滚动中
-
-// 定义滚动数字的函数
-function rollNumber() {
-    numberElement.textContent = number;
-    number++;
-}
-
-// 按钮点击事件处理函数
-function btnClick() {
-    if (isRolling) {
-        // 如果数字在滚动中，点击按钮暂停滚动
-        clearInterval(intervalId);
-        isRolling = false;
-        btnElement.textContent = '开始抽奖';
-    } else {
-        // 如果数字没有在滚动中，点击按钮开始滚动
-        intervalId = setInterval(rollNumber, 100); // 每100毫秒滚动一次数字
-        isRolling = true;
-        btnElement.textContent = '暂停抽奖';
-    }
-}
-
-// 绑定按钮点击事件
-btnElement.addEventListener('click', btnClick);
-
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -67,21 +33,50 @@ var obj = {
         [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44],
     ]
 }
+// 获取页面元素
+var numberElement = document.getElementById('number');
+var btnElement = document.getElementById('btn');
 
-// 从对象中随机获取一个区域（索引）
-var getAreaRandomIndex = getRandom(0, Object.keys(obj).length - 1);
-// 再在上面得到的区域中再随机获取第几排（索引）
-var getRowsRandomIndex = getRandom(0, obj[Object.keys(obj)[getAreaRandomIndex]].length - 1);
-// 最后在上面得到的第几排中再随机获取第几号（索引）
-var getcolsRandomIndex = getRandom(0, obj[Object.keys(obj)[getAreaRandomIndex]][getRowsRandomIndex].length -1);
-// ----- 通过上面索引得到确切的座位号 -----
-// 得到第几区
-var area = Object.keys(obj)[getAreaRandomIndex];
-// 得到第几排
-var rows = getRowsRandomIndex + 1;
-// 得到第几列
-var cols = obj[Object.keys(obj)[getAreaRandomIndex]][getRowsRandomIndex][getcolsRandomIndex];
-//document.getElementById('result').innerHTML = '第' + area + '区, 第' + rows + '排, 第' + cols + '号';
+// 定义全局变量
+var intervalId;  // 用于保存定时器ID
+var number = 0;  // 当前数字
+var isRolling = false;  // 标记数字是否在滚动中
+
+// 定义滚动数字的函数
+function rollNumber() {
+    var getAreaRandomIndex = getRandom(0, Object.keys(obj).length - 1);
+    // 再在上面得到的区域中再随机获取第几排（索引）
+    var getRowsRandomIndex = getRandom(0, obj[Object.keys(obj)[getAreaRandomIndex]].length - 1);
+    // 最后在上面得到的第几排中再随机获取第几号（索引）
+    var getcolsRandomIndex = getRandom(0, obj[Object.keys(obj)[getAreaRandomIndex]][getRowsRandomIndex].length -1);
+    var area = Object.keys(obj)[getAreaRandomIndex];
+    // 得到第几排
+    var rows = getRowsRandomIndex + 1;
+    // 得到第几列
+    var cols = obj[Object.keys(obj)[getAreaRandomIndex]][getRowsRandomIndex][getcolsRandomIndex];
+    //var row = Math.floor(Math.random() * 10); // 生成 0-9 的随机数字
+    //var seat = Math.floor(Math.random() * 10); // 生成 0-9 的随机数字
+    numberElement.innerText = area + '-' + rows + '-' + cols; // 更新显示的数字
+}
+
+// 按钮点击事件处理函数
+function btnClick() {
+    if (isRolling) {
+        // 如果数字在滚动中，点击按钮暂停滚动
+        clearInterval(intervalId);
+        isRolling = false;
+        btnElement.textContent = '开始抽奖';
+    } else {
+        // 如果数字没有在滚动中，点击按钮开始滚动
+        intervalId = setInterval(rollNumber, 100); // 每100毫秒滚动一次数字
+        isRolling = true;
+        btnElement.textContent = '暂停抽奖';
+    }
+}
+
+// 绑定按钮点击事件
+btnElement.addEventListener('click', btnClick);
+
 /*
 function deepCopy(x){
     return JSON.parse(JSON.stringify(x));
