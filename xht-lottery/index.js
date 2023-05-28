@@ -65,12 +65,14 @@ function btnClick() {
         // 如果数字在滚动中，点击按钮暂停滚动
         clearInterval(intervalId);
         isRolling = false;
-        btnElement.textContent = '开始抽奖';
+        document.getElementById('startButton').innerText = '开始';
+        //btnElement.textContent = '开始抽奖';
     } else {
         // 如果数字没有在滚动中，点击按钮开始滚动
         intervalId = setInterval(rollNumber, 100); // 每100毫秒滚动一次数字
         isRolling = true;
-        btnElement.textContent = '暂停抽奖';
+        document.getElementById('startButton').innerText = '暂停';
+        //btnElement.textContent = '暂停抽奖';
     }
 }
 
