@@ -29,7 +29,7 @@
         }
         .result-list {
             text-align: center;
-            color: #4B3621;
+            color: #FFEBCD;
             font-size: 30px;
             line-height: 50px;
             margin-top: 50px;
@@ -38,10 +38,20 @@
         }
         .result-title {
             text-align: center;
-            color: #4B3621;
-            font-size: 40px;
+            color: #FFEBCD;
+            font-size: 50px;
             margin-top: 100px;
             font-family: '幼圆';
+        }
+        .name-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .name-item {
+            width: 25%;
+            text-align: center;
         }
 
     </style>
@@ -49,9 +59,12 @@
 <body>
 <div id="main" class="wall">
     <div class="result-title">获奖名单</div>
-    <div class="result-list" v-for="result in results">
-        <div v-for="item in result">
-            {{item}}
+    <div class="result-list" v-for="(result,index) in results">
+        {{btnstext[index]}}
+        <div class="name-group">
+            <div v-for="item in result" class="name-item">
+                {{ item }}
+            </div>
         </div>
     </div>
 </div>
@@ -60,7 +73,10 @@
     new Vue({
         el: '#main',
         data: {
-            results: []
+            results: [],
+            btnstext: [
+                    '一等奖', '二等奖', '三等奖'
+                ]
         },
         mounted () {
             let vm = this
@@ -76,6 +92,7 @@
             let results = []
             for(let nameList of str_results) {
                 let temp = JSON.parse(nameList)
+                //temp = temp.map(item => {return item.replace('<br/>', ' ')})
                 temp = temp.map(item => {return item.replace('<br/>', ' ')})
                 results.push(temp)
             }

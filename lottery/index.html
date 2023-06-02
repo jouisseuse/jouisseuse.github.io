@@ -29,7 +29,7 @@
             width: 170px;
             background: #FFEBCD;
             line-height: 30px;
-            color: #4B3621 ;
+            color: #6F4E37 ;
             font-family: '幼圆';
             margin: 5px;
             border-radius: 10px;
@@ -72,13 +72,13 @@
 
         .pure-button {
             font-family: inherit;
-            font-size: 100%;
+            font-size: 25px;
             padding: .5em 1em;
-            color: #4B3621;
+            color: #6F4E37;
             border: 0 rgba(0,0,0,0);
             background-color: #FFEBCD;
             text-decoration: none;
-            border-radius: 2px;
+            border-radius: 10px;
         }
         .pure-button:focus {
             outline: 0
@@ -94,26 +94,26 @@
 
         .button-success, .button-error, .button-warning, .button-secondary {
             color: #FFEBCD;
-            border-radius: 4px;
-            text-shadow: 0 1px 1px #4B3621;
+            border-radius: 10px;
+            text-shadow: 0 1px 1px #6F4E37 ;
         }
         .button-success {
-            background: #4B3621 ;
+            background: #6F4E37 ;
         }
         .button-error {
-            background: #4B3621;
+            background: #6F4E37;
         }
         .button-warning {
-            background:  #4B3621;
+            background:  #6F4E37;
         }
         .button-secondary {
-            background: #4B3621;
+            background: #6F4E37;
 ;
         }
         .tools {
             position: absolute;
             bottom: 20px;
-            right: 20px;
+            left: 20px;
             text-align: center;
         }
         .tools .pure-button {
@@ -121,7 +121,7 @@
             margin: 5px;
             padding: 10px 0;
             text-align: center;
-            width:50px;
+            width:80px;
         }
         .mask {
             -webkit-filter:blur(5px);
@@ -132,9 +132,9 @@
             transition: all 1s;
         }
         .result-btn {
-            margin-top: 30px;
+            margin-top: 10px;
             text-align: right;
-            margin-right: 120px;
+            margin-right: 50px;
             text-decoration: none;
             color: #FFEBCD;
         }
@@ -150,11 +150,11 @@
 </div>
 <div id="tools" class="tools">
      <button
-        v-for="value in btns"
+        v-for="(value,index) in btns"
         @click="onClick(value)"
         class="pure-button"
         :class="{ 'button-error': selected == value}"
-       >{{value}}</button>
+       >{{btnstext[index]}}</button>
     <button
        class="pure-button"
        @click="toggle"
@@ -174,7 +174,7 @@
             return [0.1 * Math.random() + 0.01, -(0.1 * Math.random() + 0.01)];
         };
         var getKey = function(item){
-            return item.name + '-' + item.phone;
+            return item.name; // + '-' + item.phone;
         };
         var createHTML = function(){
             var html = [ '<ul>' ];
@@ -207,7 +207,8 @@
                 .map(function(m){
                   choosed[getKey(m)] = 1;
                   list[m.index].style.color = color;
-                  return m.name + '<br/>' + m.phone; 
+                  //return m.name + '<br/>' + m.phone; 
+                  return m.name
                 });
             localStorage.setItem('choosed', JSON.stringify(choosed));
             return ret;
@@ -225,6 +226,9 @@
                 btns: [
                     //30, 10, 5, 2, 1
                     10,8,2
+                ],
+                btnstext: [
+                    '三等奖', '二等奖', '一等奖'
                 ]
             },
             mounted () {
