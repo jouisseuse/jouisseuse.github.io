@@ -1,12 +1,28 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "👋 Hi, I'm Bufan!"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
+I’m a first-year PhD student in Psychology at the University of Chicago, luckily advised by [Prof. Xuechunzi Bai](https://www.xuechunzibai.com) in the [Computational Social Cognition Lab](https://baixuechunzi.github.io/uchicago).
+
+Before coming to Chicago, I completed my undergraduate and master’s studies in Computer Science at Fudan University. I also worked as a research intern at the [Coalas Lab](https://www.coalas-lab.com), where I was luckily advised by [Prof. Elisa Kreiss](https://www.coalas-lab.com/elisakreiss).  
+
+Please see my [CV]({{ "/files/CV.pdf" | relative_url }}) for more details.
+
+I’m always happy to chat—feel free to drop me a message if you’d like to connect!
+
+### Research Interests
+My research interests lie broadly in **human cognitive science**—how people think, learn, and coordinate in complex social environments. I am fascinated by the **art-like nature of human intelligence: our minds not only compute but also improvise, adapt, and create patterns together**.  
+
+To study these questions, I use computational modeling and multi-agent simulations as tools to bridge psychological theory with formal analysis. My current projects focus on social bias and inequality, exploring how they can emerge from seemingly rational decision-making in collective settings.  
+
+At the same time, I remain open to new directions (still exploring!) at the intersection of cognition, computation, and society, from large language models as cognitive mirrors to the dynamics of human–AI collaboration.
+
+<!-- 
 This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
 
  You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and Markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
@@ -53,4 +69,4 @@ Example: editing a Markdown file for a talk
 
 For more info
 ------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful. -->
