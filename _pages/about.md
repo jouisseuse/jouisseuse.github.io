@@ -9,7 +9,7 @@ redirect_from:
 
 I’m a first-year PhD student in Psychology at the University of Chicago, luckily advised by [Prof. Xuechunzi Bai](https://www.xuechunzibai.com) in the [Computational Social Cognition Lab](https://baixuechunzi.github.io/uchicago).
 
-Before coming to Chicago, I completed my undergraduate and master’s studies in Computer Science at Fudan University. I also worked as a research intern at the [Coalas Lab](https://www.coalas-lab.com), where I was luckily advised by [Prof. Elisa Kreiss](https://www.coalas-lab.com/elisakreiss).  
+Before coming to Chicago, I completed my undergraduate and master’s degrees in Computer Science at Fudan University where I worked in [SecSys Lab](https://secsys.fudan.edu.cn) under the guidance by [Prof. Yuan Zhang](https://yuanxzhang.github.io) and [Prof. Jiarun Dai](https://djrrr.github.io), focusing on the safety and robustness of autonomous driving systems. I also worked as a research intern at the [Coalas Lab](https://www.coalas-lab.com), where I was luckily advised by [Prof. Elisa Kreiss](https://www.coalas-lab.com/elisakreiss), focusing on the brittle nature of LLM bias measurement.  
 
 Please see my [CV]({{ "/files/CV.pdf" | relative_url }}) for more details.
 
