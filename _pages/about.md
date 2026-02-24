@@ -16,11 +16,18 @@ Please see my [CV]({{ "/files/CV.pdf" | relative_url }}) for more details.
 I’m always happy to chat—feel free to drop me a message if you’d like to connect!
 
 ### Research Interests
-My research interests lie broadly in **human cognitive science**—how people think, learn, and coordinate in complex social environments. I am fascinated by the **art-like nature of human intelligence: our minds not only compute but also improvise, adapt, and create patterns together**.  
+My research examines **how micro level individual behaviors can unintentionally produce harmful macro level outcomes** such as bias, stereotypes, and social hierarchy. I focus on **collective dynamics** in both human and artificial intelligence systems, using **computational modeling and agent based simulations** to test and refine psychological theory. In particular, I study how intelligent agents learn, coordinate, and sometimes systematically fail in complex social environments.
+
+More broadly, I am interested in human cognitive science and how people think, learn, and coordinate under uncertainty. I am especially fascinated by the art like nature of human intelligence. The human mind does not merely compute. It improvises, adapts, and creates patterns collectively.
+
+<!-- ### News -->
+
+
+<!-- My research interests lie broadly in **human cognitive science**—how people think, learn, and coordinate in complex social environments. I am fascinated by the **art-like nature of human intelligence: our minds not only compute but also improvise, adapt, and create patterns together**.  
 
 To study these questions, I use computational modeling and multi-agent simulations as tools to bridge psychological theory with formal analysis. My current projects focus on social bias and inequality, exploring how they can emerge from seemingly rational decision-making in collective settings.  
 
-At the same time, I remain open to new directions (still exploring!) at the intersection of cognition, computation, and society, from large language models as cognitive mirrors to the dynamics of human–AI collaboration.
+At the same time, I remain open to new directions (still exploring!) at the intersection of cognition, computation, and society, from large language models as cognitive mirrors to the dynamics of human–AI collaboration. -->
 
 <!-- 
 This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
