@@ -7,20 +7,113 @@ redirect_from:
   - /about.html
 ---
 
-I’m a first-year PhD student in Psychology at the University of Chicago, luckily advised by [Prof. Xuechunzi Bai](https://www.xuechunzibai.com) in the [Computational Social Cognition Lab](https://baixuechunzi.github.io/uchicago).
-
-Before coming to Chicago, I completed my undergraduate and master’s degrees in Computer Science at Fudan University where I worked in [SecSys Lab](https://secsys.fudan.edu.cn) under the guidance by [Prof. Yuan Zhang](https://yuanxzhang.github.io) and [Prof. Jiarun Dai](https://djrrr.github.io), focusing on the robustness of autonomous driving systems. I also worked as a research intern at the [Coalas Lab](https://www.coalas-lab.com), where I was luckily advised by [Prof. Elisa Kreiss](https://www.coalas-lab.com/elisakreiss), focusing on the brittle nature of LLM bias measurement.  
+I’m a first-year PhD student in Psychology at the University of Chicago, fortunate to be advised by [Prof. Xuechunzi Bai](https://baixuechunzi.github.io/uchicago/) in the Computational Social Cognition Lab. Before coming to Chicago, I completed my undergraduate and master’s degrees in Computer Science at Fudan University.
+<!-- where I worked in [SecSys Lab](https://secsys.fudan.edu.cn) under the guidance of [Prof. Yuan Zhang](https://yuanxzhang.github.io) and [Prof. Jiarun Dai](https://djrrr.github.io), focusing on the robustness of autonomous driving systems. I also worked as a research intern at the [Coalas Lab](https://www.coalas-lab.com), where I was fortunate to be advised by [Prof. Elisa Kreiss](https://www.coalas-lab.com/elisakreiss), focusing on the brittle nature of LLM bias measurement.   -->
 
 Please see my [CV]({{ "/files/CV.pdf" | relative_url }}) for more details.
 
-I’m always happy to chat—feel free to drop me a message if you’d like to connect!
-
 ### Research Interests
-My research examines **how micro level individual behaviors can unintentionally produce harmful macro level outcomes** such as bias, stereotypes, and social hierarchy. I focus on **collective dynamics** in both human and artificial intelligence systems, using **computational modeling and agent based simulations** to test and refine psychological theory. In particular, I study how intelligent agents learn, coordinate, and sometimes systematically fail in complex social environments.
+My research examines **how micro-level individual behaviors can unintentionally produce harmful macro-level outcomes** such as bias, stereotypes, and social hierarchy. I focus on **collective dynamics** in both human and artificial intelligence systems, using **computational modeling and agent-based simulations** to test and refine psychological theory. In particular, I study how intelligent agents learn, coordinate, and sometimes systematically fail in complex social environments.
 
-More broadly, I am interested in human cognitive science and how people think, learn, and coordinate under uncertainty. I am especially fascinated by the art like nature of human intelligence. The human mind does not merely compute. It improvises, adapts, and creates patterns collectively.
+More broadly, I am interested in human cognitive science and how people think, learn, and coordinate under uncertainty. I am especially fascinated by the art-like nature of human intelligence. The human mind does not merely compute. It improvises, adapts, and creates patterns collectively.
 
-<!-- ### News -->
+<!-- ### Connect -->
+
+
+### News
+
+<div class="news-panel" role="region" aria-label="Recent news">
+  <ul class="news-list">
+
+    <li>
+      <span class="news-date">2026-02</span>
+      <span class="news-text">I received BOTH the Norman Henry Anderson Travel Award and the Norman Henry Anderson Research Award (Winter 2026)! </span>
+    </li>
+
+    <li>
+      <span class="news-date">2026-02</span>
+      <span class="news-text">I joined the program committee for <a href="https://sora.ics.uci.edu/se4ads_26/" target="_blank" rel="noopener">FSE SE4ADS 2026</a>! Looking forward to your submissions!</span>
+    </li>
+
+    <li>
+      <span class="news-date">2026-02</span>
+      <span class="news-text">My FIRST tutorial with my advisor Prof. Bai was accepted at IC2S2 2026! See you in Burlington! 🎉</span>
+    </li>
+
+    <li>
+      <span class="news-date">2025-12</span>
+      <span class="news-text">I received the PGSO Travel and Research Grant (2025)!</span>
+    </li>
+
+    <li>
+      <span class="news-date">2025-11</span>
+      <span class="news-text">
+        My work <em>Collective Bias Emerges Even from Rational Social Learning</em> was accepted for a paper talk at MPA 2026! See you in Chicago!
+        <a href="https://osf.io/preprints/psyarxiv/nk632_v2" target="_blank" rel="noopener">[paper]</a>,
+        <a href="https://osf.io/58nbt/overview" target="_blank" rel="noopener">[data]</a>
+      </span>
+    </li>
+
+    <li>
+      <span class="news-date">2025-10</span>
+      <span class="news-text">
+        My work <em>Rational Social Learning Makes Group Hiring More Efficient and Biased</em> was selected for the Spotlight Data Blitz at SPSP 2026! See you in Chicago!
+        <a href="https://osf.io/preprints/psyarxiv/nk632_v2" target="_blank" rel="noopener">[paper]</a>,
+        <a href="https://osf.io/58nbt/overview" target="_blank" rel="noopener">[data]</a>
+      </span>
+    </li>
+
+    <li>
+      <span class="news-date">2025-09</span>
+      <span class="news-text">Moved to Chicago and started my PhD! 😎 <a href="https://psychology.uchicago.edu/directory/bufan-gao" target="_blank" rel="noopener"> [student profile]</a></span>
+    </li>
+
+    <li>
+      <span class="news-date">2025-08</span>
+      <span class="news-text">
+        My paper <em>Measuring Bias or Measuring the Task: Understanding the Brittle Nature of LLM Gender Biases</em> was accepted at EMNLP 2025! Thanks to <a href="https://www.coalas-lab.com/elisakreiss" target="_blank" rel="noopener">Prof. Elisa Kreiss</a> for the amazing guidance! ☺️
+        <a href="https://aclanthology.org/2025.emnlp-main.342.pdf" target="_blank" rel="noopener">[paper]</a>,
+        <a href="https://github.com/jouisseuse/BiasOrTask/tree/main" target="_blank" rel="noopener">[code]</a>
+      </span>
+    </li>
+
+    <li>
+      <span class="news-date">2025-07</span>
+      <span class="news-text">Presented <em>Microfoundations of Statistical Discrimination</em> as a parallel talk at IC2S2 2025 in Norrköping, Sweden!</span>
+    </li>
+
+    <li>
+      <span class="news-date">2025-06</span>
+      <span class="news-text">I successfully defended my master’s thesis and graduated! Many thanks to my advisors <a href="https://djrrr.github.io" target="_blank" rel="noopener">Prof. Jiarun Dai</a> and <a href="https://yuanxzhang.github.io" target="_blank" rel="noopener">Prof. Yun Zhang</a>! 🙏</span>
+    </li>
+
+    <li>
+      <span class="news-date">2025-02</span>
+      <span class="news-text">I was accepted to the University of Chicago Psychology PhD programam fortunate to work with <a href="https://baixuechunzi.github.io/uchicago/" target="_blank" rel="noopener"> Prof. Xuechunzi Bai</a>!</span>
+    </li>
+
+    <li>
+      <span class="news-date">2025-01</span>
+      <span class="news-text">I joined the program committee for <a href="https://conf.researchr.org/home/icse-2025/se4ads-2025" target="_blank" rel="noopener">ICSE SE4ADS 2025</a>! Looking forward to your submissions!</span>
+    </li>
+
+    <li>
+      <span class="news-date">2024-11</span>
+      <span class="news-text">Presented <em>SCTrans</em> at ICSE 2024 in Lisbon, Portugal! </span>
+    </li>
+
+    <li>
+      <span class="news-date">2024-05</span>
+      <span class="news-text">
+        My first paper <em>SCTrans</em> was accepted at ICSE 2024! See you in Portugal!  <a href="https://dl.acm.org/doi/10.1145/3597503.3623350" target="_blank" rel="noopener">[paper]</a>,
+        <a href="https://github.com/seclab-fudan/SCTrans?tab=readme-ov-file" target="_blank" rel="noopener">[code]</a>
+      </span>
+    </li>
+
+  </ul>
+</div>
+
+<!-- Tip: duplicate one <li>...</li> line above for each new short update. -->
 
 
 <!-- My research interests lie broadly in **human cognitive science**—how people think, learn, and coordinate in complex social environments. I am fascinated by the **art-like nature of human intelligence: our minds not only compute but also improvise, adapt, and create patterns together**.  
