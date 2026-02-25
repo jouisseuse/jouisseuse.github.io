@@ -99,8 +99,12 @@ $(document).ready(function () {
           }
         });
 
-  // Enable the theme toggle
-  $('#theme-toggle').on('click', toggleTheme);
+  // Enable the theme toggle (bind to both li and inner anchor for robustness)
+  $('#theme-toggle, #theme-toggle a').on('click', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    toggleTheme();
+  });
 
   // Enable the sticky footer
   var bumpIt = function () {
