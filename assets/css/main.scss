@@ -390,7 +390,7 @@
 
 @media (max-width: 500px) {
   .news-list li {
-    grid-template-columns: 0fr;
+    grid-template-columns: 1fr;
     gap: 0.0rem;
   }
   .news-date {
