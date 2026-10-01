@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I’m a first-year PhD student in Psychology at the University of Chicago, fortunate to be advised by [Prof. Xuechunzi Bai](https://baixuechunzi.github.io/uchicago/) in the Computational Social Cognition Lab. Before coming to Chicago, I completed my undergraduate and master’s degrees in Computer Science at Fudan University.
+I’m a second-year PhD student in Psychology at the University of Chicago, fortunate to be advised by [Prof. Xuechunzi Bai](https://baixuechunzi.github.io/uchicago/) in the Computational Social Cognition Lab. Before coming to Chicago, I completed my undergraduate and master’s degrees in Computer Science at Fudan University.
 <!-- where I worked in [SecSys Lab](https://secsys.fudan.edu.cn) under the guidance of [Prof. Yuan Zhang](https://yuanxzhang.github.io) and [Prof. Jiarun Dai](https://djrrr.github.io), focusing on the robustness of autonomous driving systems. I also worked as a research intern at the [Coalas Lab](https://www.coalas-lab.com), where I was fortunate to be advised by [Prof. Elisa Kreiss](https://www.coalas-lab.com/elisakreiss), focusing on the brittle nature of LLM bias measurement.   -->
 
 Please see my [CV]({{ "/files/CV.pdf" | relative_url }}) for more details.
@@ -26,6 +26,21 @@ More broadly, I am interested in human cognitive science and how people think, l
   <ul class="news-list">
 
     <li>
+      <span class="news-date">2026-09</span>
+      <span class="news-text">My work <em>Cooperative agents specialize more but explore less</em> was accepted at the <a href="https://projectnanda.org/workshops/neurips26/" target="_blank" rel="noopener">NeurIPS Workshop on Agentic Web 2026</a>!</span>
+    </li>
+
+    <li>
+      <span class="news-date">2026-07</span>
+      <span class="news-text">I co-led <em>Building Multiplayer Experiments with Humans and LLM Agents</em> with Prof. Bai at IC2S2 2026 in Burlington! <a href="https://github.com/jouisseuse/IC2S2-26-Tutorial" target="_blank" rel="noopener">[materials]</a></span>
+    </li>
+
+    <li>
+      <span class="news-date">2026-06</span>
+      <span class="news-text">My paper <em>ExplorIt: Simulation-based Fuzzing for Autonomous Driving Systems via Multi-Agent Interaction Modeling</em> was accepted on 22 June 2026 at ACM Transactions on Software Engineering and Methodology (TOSEM)! Published online in July 2026. <a href="https://doi.org/10.1145/3832778" target="_blank" rel="noopener">[paper]</a></span>
+    </li>
+
+    <li>
       <span class="news-date">2026-02</span>
       <span class="news-text">I received BOTH the Norman Henry Anderson Travel Award and the Norman Henry Anderson Research Award (Winter 2026)! </span>
     </li>
@@ -42,7 +57,7 @@ More broadly, I am interested in human cognitive science and how people think, l
 
     <li>
       <span class="news-date">2025-12</span>
-      <span class="news-text">I received the PGSO Travel and Research Grant (2025)!</span>
+      <span class="news-text">I received a PGSO Travel and Research Grant through the Mrs. Richard W. Temple Fund (2025)!</span>
     </li>
 
     <li>
