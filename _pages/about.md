@@ -26,6 +26,15 @@ More broadly, I am interested in human cognitive science and how people think, l
   <ul class="news-list">
 
     <li>
+      <span class="news-date">2026-10</span>
+      <span class="news-text">
+        My paper <em>Rational Social Learning Makes Group Hiring More Efficient and Biased</em> was accepted for publication in <em>PNAS Nexus</em>! 🎉
+        <a href="https://osf.io/preprints/psyarxiv/nk632_v2" target="_blank" rel="noopener">[preprint]</a>,
+        <a href="https://osf.io/58nbt/overview" target="_blank" rel="noopener">[data]</a>
+      </span>
+    </li>
+
+    <li>
       <span class="news-date">2026-09</span>
       <span class="news-text">My work <em>Cooperative agents specialize more but explore less</em> was accepted at the <a href="https://projectnanda.org/workshops/neurips26/" target="_blank" rel="noopener">NeurIPS Workshop on Agentic Web 2026</a>!</span>
     </li>
